@@ -12,6 +12,15 @@ public class WeightedGraph<V> {
         vertices.add(vertex);
     }
 
+    public Vertex<V> getVertex(V data) {
+        for (Vertex<V> vertex : vertices) {
+            if (vertex.getData().equals(data)) {
+                return vertex;
+            }
+        }
+        return null;
+    }
+
     public List<Vertex<V>> getVertices() {
         return vertices;
     }
